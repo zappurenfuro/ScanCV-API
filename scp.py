@@ -1892,9 +1892,35 @@ class TFIDFEnhancedResumeScanner:
     
     def _aggregate_text(self, df, group_col='person_id'):
         """Aggregate text data by group column."""
-        if group_col in df.columns:
-            return df.groupby(group_col).agg(lambda x: '; '.join(x.dropna().unique())).reset_index()
-        return df
+        if df is None or df.empty:
+            return pd.DataFrame()
+        
+        if group_col not in df.columns:
+            logging.warning(f"Group column '{group_col}' not found in dataframe. Available columns: {list(df.columns)}")
+            return df
+        
+        # Get all columns except the group column
+        text_columns = [col for col in df.columns if col != group_col]
+        
+        if not text_columns:
+            # If no text columns to aggregate, return unique group values
+            return df[[group_col]].drop_duplicates().reset_index(drop=True)
+        
+        # Create aggregation dictionary for text columns only
+        agg_dict = {}
+        for col in text_columns:
+            agg_dict[col] = lambda x: '; '.join(x.dropna().astype(str).unique())
+        
+        # Group by the group column and aggregate text columns
+        try:
+            result = df.groupby(group_col, as_index=False).agg(agg_dict)
+            return result
+        except Exception as e:
+            logging.error(f"Error in _aggregate_text: {str(e)}")
+            logging.error(f"DataFrame columns: {list(df.columns)}")
+            logging.error(f"Group column: {group_col}")
+            logging.error(f"Text columns: {text_columns}")
+            raise
     
     def create_tfidf_vectors(self):
         """Create TF-IDF vectors for the corpus."""
