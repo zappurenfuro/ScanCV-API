@@ -1,0 +1,114 @@
+c:\Users\USER\AppData\Local\Programs\Python\Python311\Lib\site-packages\tqdm\auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
+  from .autonotebook import tqdm as notebook_tqdm
+2025-05-15 20:54:54,654 - INFO - System resources:
+2025-05-15 20:54:54,655 - INFO -   CPU: 16 cores
+2025-05-15 20:54:54,655 - INFO -   RAM: 31.84 GB total, 17.49 GB available
+2025-05-15 20:54:54,656 - INFO -   GPU: NVIDIA GeForce RTX 4060 with 8.00 GB memory
+2025-05-15 20:54:54,657 - INFO - Using device: cuda
+2025-05-15 20:54:54,658 - INFO - Mixed precision is available and will be used
+2025-05-15 20:54:54,658 - INFO - CUDA optimizations enabled
+2025-05-15 20:54:54,658 - INFO - Created RAM-based temporary directory at C:\Users\USER\AppData\Local\Temp\tmpwbuogdcb
+2025-05-15 20:54:54,659 - INFO - Loading embedding model (BAAI/bge-large-en-v1.5)...
+2025-05-15 20:54:54,660 - INFO - Use pytorch device_name: cuda:0
+2025-05-15 20:54:54,660 - INFO - Load pretrained SentenceTransformer: BAAI/bge-large-en-v1.5
+2025-05-15 20:54:59,773 - INFO - Loading datasets with memory optimization...
+2025-05-15 20:54:59,777 - INFO - Using chunk size of 100000 based on 17.38 GB available RAM
+2025-05-15 20:54:59,777 - INFO - Loading CSV files in chunks...
+2025-05-15 20:55:02,856 - INFO - Cleaning text in all dataframes...
+2025-05-15 20:55:09,020 - INFO - Filtering and cleaning data...
+2025-05-15 20:55:09,137 - INFO - Processing title column to keep only the first title...
+2025-05-15 20:55:09,226 - INFO - Aggregating text by person...
+2025-05-15 20:55:20,047 - INFO - Merging dataframes...
+2025-05-15 20:55:20,463 - INFO - Removing duplicate rows based on content (excluding person_id)...
+2025-05-15 20:55:20,537 - INFO - Removed 36643 duplicate content rows (66.71% of data)
+2025-05-15 20:55:20,539 - INFO - Creating text representation...
+2025-05-15 20:55:21,262 - INFO - DataFrame memory usage before optimization: 53.18 MB
+...
+2025-05-15 21:00:20,821 - INFO - Matching text against dataset (resume)...
+2025-05-15 21:00:20,822 - INFO - Matching text (hash: 8e0775ac...)
+c:\Users\USER\Downloads\Model AI\src\embedding_manager.py:168: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings...
+✅ Successfully processed CSV data and created embeddings
+
+📄 Processing resume file: cv_hilda.pdf
+Batches: 100%|██████████| 1/1 [00:00<00:00, 24.65it/s]
+2025-05-15 21:00:21,023 - INFO - Found 5 resume matches and saved to resume_matches_cv_hilda_1747317621.csv
+2025-05-15 21:00:21,026 - INFO - Matching text against dataset (job)...
+2025-05-15 21:00:21,027 - INFO - Matching text (hash: 8e0775ac...)
+c:\Users\USER\Downloads\Model AI\src\embedding_manager.py:168: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+✅ Processed cv_hilda.pdf and found 5 matches
+
+📊 Matching cv_hilda.pdf against job titles in the dataset:
+Batches: 100%|██████████| 1/1 [00:00<00:00, 29.26it/s]
+2025-05-15 21:00:21,184 - INFO - Found 5 job matches and saved to job_matches_cv_hilda_1747317621.csv
+
+🏆 Top Job Matches for cv_hilda.pdf:
+
+🔹 Title: Multimedia Architect
+   Similarity: 63.41999816894531%
+   Description: Project Management; Technology Trainer; Effective Communication Skills; Keen Sense of Responsibility...
+
+🔹 Title: Freelance Designer / Front End Developer
+   Similarity: 62.380001068115234%
+   Description: Award-winning multimedia professional; Advertising, publishing, animation, design and illustration e...
+
+🔹 Title: Digital Marketing Manager
+   Similarity: 62.209999084472656%
+   Description: Video Editing; Video Production; Photoshop; Digital Marketing; Social Media Marketing; Social Media ...
+
+🔹 Title: Senior Video Producer
+   Similarity: 62.060001373291016%
+   Description: Exceptional Customer Service; Efficient time management; Confident Public speaking; Problem solving ...
+
+🔹 Title: Robotics Mentor/volunteer
+   Similarity: 62.029998779296875%
+   Description: Video editing; Photography; Web development; Graphic design; Computer Aided Design (CAD); Public Rel...
+
+📄 Processing resume file: cv_rakha.pdf
+2025-05-15 21:00:21,280 - INFO - Extracted text from cv_rakha.pdf (hash: 8282bdb6...)
+2025-05-15 21:00:21,281 - INFO - Text preview: Farel Rakha Dzakwan profesionalfarelrakhad@gmail.com | +6282143066677 | https://www.linkedin.com/in/farel-rakha-dzakwan EDUCATION University of Brawijaya | Informatics Engineering | GPA: 3.74/4.00 Aug...
+2025-05-15 21:00:21,281 - INFO - Extracted 4497 characters from cv_rakha.pdf
+2025-05-15 21:00:21,282 - INFO - Matching text against dataset (resume)...
+2025-05-15 21:00:21,283 - INFO - Matching text (hash: 8282bdb6...)
+c:\Users\USER\Downloads\Model AI\src\embedding_manager.py:168: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+Batches: 100%|██████████| 1/1 [00:00<00:00, 27.08it/s]
+2025-05-15 21:00:21,476 - INFO - Found 5 resume matches and saved to resume_matches_cv_rakha_1747317621.csv
+2025-05-15 21:00:21,478 - INFO - Matching text against dataset (job)...
+2025-05-15 21:00:21,479 - INFO - Matching text (hash: 8282bdb6...)
+c:\Users\USER\Downloads\Model AI\src\embedding_manager.py:168: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+✅ Processed cv_rakha.pdf and found 5 matches
+
+📊 Matching cv_rakha.pdf against job titles in the dataset:
+Batches: 100%|██████████| 1/1 [00:00<00:00, 28.71it/s]
+2025-05-15 21:00:21,652 - INFO - Found 5 job matches and saved to job_matches_cv_rakha_1747317621.csv
+2025-05-15 21:00:21,661 - INFO - Cleaning up resources...
+
+🏆 Top Job Matches for cv_rakha.pdf:
+
+🔹 Title: Graduate Student Researcher
+   Similarity: 66.5199966430664%
+   Description: deep learning; computer vision; multi-POV; multimodal input; pose prediction; localization; sound so...
+
+🔹 Title: Machine Learning Scientist
+   Similarity: 66.18000030517578%
+   Description: Novel material discovery and design; Future defect/behavior prediction; Categorizing/analyzing custo...
+
+🔹 Title: Senior Data Scientist
+   Similarity: 65.58000183105469%
+   Description: Data Science; NLP; Machine Learning; Competitive Analysis; Sales Enablement; Agile; GitHub; Web Scra...
+
+🔹 Title: Senior Machine Learning Engineer
+   Similarity: 65.41999816894531%
+   Description: Machine Learning; Deep Learning; Natural Language Processing; Predictive Modeling; Data Mining; Comp...
+
+🔹 Title: Software Developer
+   Similarity: 65.29000091552734%
+   Description: Passionate Python developer; Deep learning and machine learning algorithms using Python; C, C++, Pyt...
+
+🎉 All examples completed!
+Check the output folder (output) for results and CSV files.
+2025-05-15 21:00:21,766 - INFO - Cleanup complete
